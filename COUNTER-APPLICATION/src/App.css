@@ -17,10 +17,10 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-.buttons{
+/* .buttons{
   display: flex;
   justify-content: space-around;
-}
+} */
 
 @keyframes logo-spin {
   from {
@@ -43,4 +43,154 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Counter Container */
+.counter-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 3rem;
+  color: #555;
+  margin: 1.5rem 0;
+  font-weight: 500;
+}
+
+/* Button Container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+button:first-child {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+button:nth-child(2) {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+button:last-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Count animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.count-change {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .counter-container {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 2.5rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button {
+    width: 100%;
+    margin: 0.5rem 0;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-container {
+    padding: 1rem;
+    width: 95%;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  button {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
 }
